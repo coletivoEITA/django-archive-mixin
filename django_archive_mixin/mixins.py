@@ -20,7 +20,7 @@ class ArchiveMixin(models.Model):
 
         ArchiveModel.all_objects.deleted.all()
     """
-    deleted = models.DateTimeField(null=True, blank=True)
+    deleted = models.DateTimeField(null=True, blank=True, editable=False)
 
     objects = managers.ArchiveManager()
     all_objects = models.Manager()
